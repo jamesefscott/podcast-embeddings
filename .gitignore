@@ -1,0 +1,7 @@
+.env
+.vscode
+__pycache__
+
+other_data
+processed_jsons
+transcribed_output
