@@ -5,8 +5,8 @@ name: Fish Processing Job
 
 on:
   workflow_dispatch:
-  # schedule:
-  #  - cron:  '30 6 * * *'
+  schedule:
+   - cron:  '30 6 * * *'
 
 permissions:
   contents: read
@@ -37,4 +37,4 @@ jobs:
         SPOTIFY_ACCESS_TOKEN: ${{secrets.SPOTIFY_ACCESS_TOKEN}}
         SPOTIFY_REFRESH_TOKEN: ${{secrets.SPOTIFY_REFRESH_TOKEN}}
       run: |
-        python process_episodes_cli.py --spotify-id 4pqW0HTIeZcx7vqHpwzmZj --coll-name fish --rss-url "https://audioboom.com/channels/2399216.rss" --log-level info --max-n 1
+        python process_episodes_cli.py --spotify-id 4pqW0HTIeZcx7vqHpwzmZj --coll-name fish --rss-url "https://audioboom.com/channels/2399216.rss" --log-level info --max-n 3
